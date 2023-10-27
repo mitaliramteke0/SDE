@@ -1,0 +1,22 @@
+<!-- templates/expense_manager/expense_list.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Expense List</title>
+</head>
+<body>
+    <h1>Expense List</h1>
+    <ul>
+        {% for expense in expenses %}
+            <li>
+                Amount: {{ expense.amount }}<br>
+                Description: {{ expense.description }}<br>
+                Type: {{ expense.type }}<br>
+                Timestamp: {{ expense.timestamp }}
+            </li>
+        {% empty %}
+            <p>No expenses available.</p>
+        {% endfor %}
+    </ul>
+</body>
+</html>
